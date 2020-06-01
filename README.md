@@ -74,19 +74,19 @@ We adopt the [Association Rule Mining and Community Detection](Vocubulary/README
 We adopted a consensus-driven, iterative approach to combine the observed tag landscape with existing expert knowledge documented inbooks and websites such as Mobile Design Pattern Gallery and Google’s Material Design.
 
 Figure 5 shows the categorization of some most frequent UI-related tags. For example, the APP FUNCTIONALITY category contains "MUSIC", "FOOD & DRINK", "GAME", and the subcategory "FOOD & DRINK" contains UI design tagged with "Food", "Restaurant", "Drink", etc.
-<div style="color:#0000FF" align="center">
+<p align="center">
 <img src="figures/figure4.png" style="width:100%"/> 
 <figcaption>Fig. 5. The categorization of some most frequent UI-related tags.</figcaption>
-</div>
+</p>
 
 ### Consistency of Vocabulary
 We adopt a semi-automatic method (1) train a word embedding to extract semantically-related words like "minimal" and "minimalistic" (2) define a set of rules to discriminate the abbreviations (3) manually check the vocabulary
 
 Figure 6 shows the 40 most frequent UI related tags with their abbreviations and synonyms and in brackets indicate the number of occurence.
-<div style="color:#0000FF" align="center">
+<p align="center">
 <img src="figures/figure5.png"/> 
 <figcaption>Fig. 6. The 40 most frequent UI related tags with their abbreviations and synonyms and in brackets indicate the number of occurence.</figcaption>
-</div>
+</p>
 
 The full UI category can be viewed [Here](RecoverTags/categorization.py)
 
@@ -95,18 +95,18 @@ The full UI category can be viewed [Here](RecoverTags/categorization.py)
 Figure 7 shows the overview of our approach.
 We first collect all existing UI design with specific tags identified in our empirical study, and then develop a binary tag prediction model (predicting the image is or isn't belonging to the tag) by combining a CNN model for capturing visual UI information and a fully-connected neural network for capturing textual information of existing tags.
 Additionally, to understand how our ensemble model make its decisions through the visual information, we apply a visualization technique (Saliency Maps) for understanding which part of the figure and which keyword leading to the final prediction.
-<div style="color:#0000FF" align="center">
+<p align="center">
 <img src="figures/CNN_structure.png"/> 
 <figcaption>Fig. 7. The architecture of our tag prediction model.</figcaption>
-</div>
+</p>
 
 ### Dataset preparing
 Figure 8 shows the statistics of our dataset for each tag. The dataset contains 50% positive and 50% negative samples. 
 
-<div style="color:#0000FF" align="center">
+<p align="center">
 <img src="figures/dataset.png"/> 
 <figcaption>Fig. 8. The number of instances per tag in the proposed dataset.</figcaption>
-</div>
+</p>
 
 ### Training and Demo process
 Please follow the [Readme.md](RecoverTags/README.md) instruction in RecoverTags folder.
@@ -118,48 +118,48 @@ We further set up several basic machine-learning baselines including the feature
 
 **Results show that the improvement of our model is significant in all comparisons and in all data splitting.**
 
-<div style="color:#0000FF" align="center">
+<p align="center">
 <img src="figures/result.png"/> 
 <figcaption>Fig. 9. Tag classification accuracy for four dataset splitting ratio in different methods.</figcaption>
-</div>
+</p>
 
 The detailed results can be viewed here.
-<div style="color:#0000FF" align="center">
+<p align="center">
 <img src="figures/detailresult.png"/> 
 <figcaption>Fig. 10. Tag classification accuracy in four splitting ratio.</figcaption>
-</div>
+</p>
 
 Figure 11 shows some predicted additional tags for example UI designs by our model.
-<div style="color:#0000FF" align="center">
+<p align="center">
 <img src="figures/figure9.png"/> 
 <figcaption>Fig. 11. The predicted tags by our model for complementing the original tags.</figcaption>
-</div>
+</p>
 
 Figure 12 shows the visualization of salient visual and textual features in our model leading to the final predictions.
-<div style="color:#0000FF" align="center">
+<p align="center">
 <img src="figures/figure10.png"/> 
 <figcaption>Fig. 12. Visualization of the salient features in our model leading to the final predictions.</figcaption>
-</div>
+</p>
 
  
 
 Some common causes for tag augmentation failure. 
-<div style="color:#0000FF" align="center">
+<p align="center">
 <img src="figures/failure.png"/> 
 <figcaption>Fig. 13. Examples of the three kinds of prediction errors.</figcaption>
-</div>
+</p>
 
 ## RETRIEVAL EVALUATION
 We conduct a pilot user study to evaluate the usefulness of the predicted addition tags for boot-strapping the UI design retrieval. Figure 14 and Figure 15 provides initial evidence of the usefulness of our method for enhancing the performance of tagging-based search. For more detail of this user study, please [see the website](https://sites.google.com/view/uitagpredictionuserstudy/home).
-<div style="color:#0000FF" align="center">
+<p align="center">
 <img src="figures/table3.png"/> 
 <figcaption>Fig. 14. The random queries for searching UI designs.</figcaption>
-</div>
+</p>
 
-<div style="color:#0000FF" align="center">
+<p align="center">
 <img src="figures/table4.png"/> 
 <figcaption>Fig. 15. The comparison of the experiment and control groups. ∗ denotes 𝑝<0.01, ∗∗ denotes 𝑝<0.05.</figcaption>
-</div>
+</p>
 
 ## License
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
