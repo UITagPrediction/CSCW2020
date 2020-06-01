@@ -4,11 +4,12 @@
 
 Figure 5 shows some predicted additional tags for example UI designs by our model. It shows that our models can help locate the platform (e.g., “website” for the second UI), screen color (e.g, “blue”for the fifth UI), app functionality (e.g., “food” for the first UI), screen functionality (e.g., “checkout”for the third UI), and screen layout (e.g., “grid” for the fourth example). All of these predicted tagsare not appearing in the original tag set, and these additional tags can complement with the originalones for more effective UI retrieval.
 
-<!-- <div style="color:#0000FF" align="center">
-    <img src="/figures/figure9.png"/> 
+<div style="color:#0000FF" align="center">
+    <img src="https://github.com/UITagPrediction/CSCW2020/blob/master/figures/figure9.png"/> 
+<figcaption>Fig. 1. The predicted tags by our model for complementing the original tags.</figcaption>
 </div>
 
-![alt text](/figures/figure1.png) -->
+![alt text](/figures/figure1.png)
 
 ## Installation
 * Pre-trained models: [models](https://drive.google.com/file/d/1UoX8DouGC8wZgGEKnH_TN97N5vF8j310/view?usp=sharing) 
