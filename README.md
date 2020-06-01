@@ -84,8 +84,8 @@ We adopt a semi-automatic method (1) train a word embedding to extract semantica
 Figure 6 shows the 40 most frequent UI related tags with their abbreviations and synonyms and in brackets indicate the number of occurence.
 <p align="center">
 <img src="figures/figure5.png"/> 
-<figcaption>Fig. 6. The 40 most frequent UI related tags with their abbreviations and synonyms and in brackets indicate the number of occurence.</figcaption>
-</p>
+<figcaption></figcaption>
+</p><p align="center">Fig. 6. The 40 most frequent UI related tags with their abbreviations and synonyms and in brackets indicate the number of occurence.<p align="center">
 
 The full UI category can be viewed [Here](RecoverTags/categorization.py)
 
