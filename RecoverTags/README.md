@@ -9,7 +9,7 @@ Figure 5 shows some predicted additional tags for example UI designs by our mode
 <figcaption>Fig. 1. The predicted tags by our model for complementing the original tags.</figcaption>
 </div>
 
-![alt text](/figures/figure1.png)
+<!-- ![alt text](/figures/figure1.png) -->
 
 ## Installation
 * Pre-trained models: [models](https://drive.google.com/file/d/1UoX8DouGC8wZgGEKnH_TN97N5vF8j310/view?usp=sharing) 
