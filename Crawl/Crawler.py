@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Feb 3 12:40:12 2019
-
-@author: Sidong Feng
-"""
 import os
 import argparse
 import urllib.request
@@ -13,10 +7,10 @@ from selenium import webdriver
 parser = argparse.ArgumentParser(description='Dribbble Crawler')
 parser.add_argument('--chromedriver', type=str, default='/usr/local/bin/chromedriver',
                     help='Chrome Driver Location (default: /usr/local/bin/chromedriver)')
-parser.add_argument('--ipath', type=str, default='./images/',
-                    help='Image Save Location (default: ./images/)')
-parser.add_argument('--mpath', type=str, default='./Metadata.csv',
-                    help='Metadata Save Location (default: ./Metadata.csv)')
+parser.add_argument('--ipath', type=str, default='../images/',
+                    help='Image Save Location (default: ../images/)')
+parser.add_argument('--mpath', type=str, default='../Metadata.csv',
+                    help='Metadata Save Location (default: ../Metadata.csv)')
 parser.add_argument('--headless', action='store_false',
                     help='Chrome headless (default: true)')
 args = parser.parse_args()

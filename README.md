@@ -1,7 +1,6 @@
 ```diff
-- 1. Create a new github
-- 2. Check any personal authorship
-- 3. Check dataset 
+- 1. Check any personal authorship
+- 5. Vocubulary and Recovertags Readme.md add html image
 ```
 # From Lost to Found: Discover Missing UI Designs through Recovering Missing Semantics
 
@@ -18,16 +17,22 @@ Figure 1 shows an example design from the design sharing website Dribbble of whi
 
 <div style="color:#0000FF" align="center">
 <img src="figures/figure1.png"/> 
+<figcaption>Fig. 1. An example design from the design sharing website http://www.dribbble.com/ of which tags illustrate the two problems with tagging-based search.</figcaption>
 </div>
 
 First, users may use different words to describe the same UI design based on their own background knowledge. The increase in the use of incoherent tags may hinder the content searching or navigation.
 For example, when designers want to search for UI designs with "user interface", this design tagged with "ui" will be omitted.
 
 
-Second, users may extract different topics from the same design according to their own understanding, hence missing some important tags associated with the GUI design images. 
+Second, users may extract different topics from the same design according to their own understanding, hence missing some closely related tags associated with the GUI design images. 
 When tagging the UI design, users tend to provide only a few keywords that describe the most obvious visual or semantic contents, while content in other aspects may be simply omitted.
 For example, although this design is related to the "food" category, this label is missing from the tags.
 
+Some example UIs with complete or incomplete tags from these designers can be seen in Figure 2.
+<div style="color:#0000FF" align="center">
+<img src="figures/completeandincomplete.png"/> 
+<figcaption>Fig. 2. Examples of UI examples with complete&incomplete tags.</figcaption>
+</div>
 <!-- ![UI-related tags association graph](/figures/communitydetection.png) -->
 
 ## EMPIRICAL STUDY OF DESIGN SHARING
@@ -40,95 +45,116 @@ We build a [web crawler](Crawl/README.md) to collect designs and associated meta
 We show some examples in our dataset, top is the designs and bottom is its metadata.
 <div style="color:#0000FF" align="center">
 <img src="figures/figure2.png"/> 
+<figcaption>Fig. 3. Example and Metadata of our Dribbble dataset crawled from December 27, 2018 to March 19, 2019</figcaption>
 </div>
-
-Within the Dribbble site, the design creators can add at most 20 tags for their design work. 
-```diff
+<!-- 
+Within the Dribbble site, the design creators can add at most 20 tags for their design work.  -->
+<!-- ```diff
 + add statistic for dataset and show UI importance. Among the top 30 most common tags, approximately 25% are UI related (e.g., “ui”, “ux”, “app”, “web”, “interface”, etc.), which indicates that user interface design is one of the most popular design areas on Dribbble.
-```
+``` -->
 
-The full dataset can be downloaded via [Google Drive](https://drive.google.com/open?id=1UpoAxyY66zlRlJ7z4ZfZUWu_FDpPRhRb)
+The full dataset can be downloaded via [Dataset](https://drive.google.com/open?id=1UpoAxyY66zlRlJ7z4ZfZUWu_FDpPRhRb) ||
+[Metadata](https://drive.google.com/file/d/1-xci75k3yZWxbb1BjK-kEg_HYH5VdDDU/view?usp=sharing)
 
 
 ### Overview of UI semantics
 
-We adopt the [association rule mining and community detection](Semantics/README.md) for visualizing the landscape of UI tags. Figure shows the UI-related tag associative graph.
+We adopt the [Association Rule Mining and Community Detection](Vocubulary/README.md) for visualizing the landscape of UI tags. Figure 4 shows the UI-related tag associative graph.
 <div style="color:#0000FF" align="center">
 <img src="figures/figure3.png"/> 
+<figcaption>Fig. 4. The UI-related tag associative graph from December 27, 2018 to March 19, 2019</figcaption>
 </div>
 
 ### Vocabulary of UI semantics
 We adopted a consensus-driven, iterative approach to combine the observed tag landscape with existing expert knowledge documented inbooks and websites such as Mobile Design Pattern Gallery and Google’s Material Design.
 
-Table shows the categorization of some most frequent UI-related tags. For example, the APP FUNCTIONALITY category contains "MUSIC", "FOOD & DRINK", "GAME", and the subcategory "FOOD & DRINK" contains UI design tagged with "Food", "Restaurant", "Drink", etc.
+Figure 5 shows the categorization of some most frequent UI-related tags. For example, the APP FUNCTIONALITY category contains "MUSIC", "FOOD & DRINK", "GAME", and the subcategory "FOOD & DRINK" contains UI design tagged with "Food", "Restaurant", "Drink", etc.
 <div style="color:#0000FF" align="center">
 <img src="figures/figure4.png"/> 
+<figcaption>Fig. 5. The categorization of some most frequent UI-related tags.</figcaption>
 </div>
 
 ### Consistency of Vocabulary
 We adopt a semi-automatic method (1) train a word embedding to extract semantically-related words like "minimal" and "minimalistic" (2) define a set of rules to discriminate the abbreviations (3) manually check the vocabulary
 
-Table shows the 40 most frequent UI related tags with their abbreviations and synonyms and in brackets indicate the number of occurence.
+Figure 6 shows the 40 most frequent UI related tags with their abbreviations and synonyms and in brackets indicate the number of occurence.
 <div style="color:#0000FF" align="center">
 <img src="figures/figure5.png"/> 
+<figcaption>Fig. 6. The 40 most frequent UI related tags with their abbreviations and synonyms and in brackets indicate the number of occurence.</figcaption>
 </div>
 
-```diff
-+ The full taxonomy can be downloaded via [Google Drive](https://drive.google.com/open?id=1UpoAxyY66zlRlJ7z4ZfZUWu_FDpPRhRb)
-```
+The full UI category can be viewed [Here](RecoverTags/categorization.py)
 
 ## AUGMENT TAGS FOR THE UI DESIGN
 
-Figure shows the overview of our approach.
+Figure 7 shows the overview of our approach.
 We first collect all existing UI design with specific tags identified in our empirical study, and then develop a binary tag prediction model (predicting the image is or isn't belonging to the tag) by combining a CNN model for capturing visual UI information and a fully-connected neural network for capturing textual information of existing tags.
-Additionally, to understand how our ensemble model make its decisions through the visual information, we apply a visualization technique (Saliency Maps) for understanding which part of the figure leading to the final prediction.
+Additionally, to understand how our ensemble model make its decisions through the visual information, we apply a visualization technique (Saliency Maps) for understanding which part of the figure and which keyword leading to the final prediction.
 <div style="color:#0000FF" align="center">
-<img src="figures/figure6.png"/> 
+<img src="figures/CNN_structure.png"/> 
+<figcaption>Fig. 7. The architecture of our tag prediction model.</figcaption>
 </div>
 
 ### Dataset preparing
-Table 2 shows the statistics of our dataset for each tag. The dataset contains 50% positive and 50% negative samples.
-```diff
-+ Updating statistics
-```
+Figure 8 shows the statistics of our dataset for each tag. The dataset contains 50% positive and 50% negative samples. 
+
 <div style="color:#0000FF" align="center">
-<img src="figures/figure7.png"/> 
+<img src="figures/dataset.png"/> 
+<figcaption>Fig. 8. The number of instances per tag in the proposed dataset.</figcaption>
 </div>
 
-<!-- These natural-language tags convey the semantics of the UI design such as internal structural information (e.g., "dashboard", "list", "chart") and belonging-software information (e.g., "ecommerce", "food", "travel").
-Table 2 shows the statistics of our dataset. In total, we collect 7,594 applications, 13,145 screenshots and 19,233 components. Besides, we split our dataset into train/val/test set, with the approximate ratio of 0.8/0.1/0.1. -->
-
-### Training and Visualizing process
+### Training and Demo process
 Please follow the [Readme.md](RecoverTags/README.md) instruction in RecoverTags folder.
 
 ## EVALUATION
-We set up several basic machine-learning baselines including the feature extraction (e.g., color histogram) with machine-learning classifiers (e.g., decision tree, SVM). **Results show that the improvement of our model is significant in all comparisons.**
+Note that as the splitting ratio may influence the final results, we experiment four splitting ratio (training : validation : tesing), 50%:25%:25%, 60%:20%:20%, 70%:15%:15% and 80%:10%:10% for each model respectively.
+
+We further set up several basic machine-learning baselines including the feature extraction (e.g., color histogram) with machine-learning classifiers (e.g., decision tree, SVM). We further set up different settings of data splitting. 
+
+**Results show that the improvement of our model is significant in all comparisons and in all data splitting.**
+
 <div style="color:#0000FF" align="center">
-<img src="figures/figure8.png"/> 
+<img src="figures/result.png"/> 
+<figcaption>Fig. 9. Tag classification accuracy for four dataset splitting ratio in different methods.</figcaption>
 </div>
 
-Figure shows some predicted additional tags for example UI designs by our model.
+The detailed results can be viewed here.
+<div style="color:#0000FF" align="center">
+<img src="figures/detailresult.png"/> 
+<figcaption>Fig. 10. Tag classification accuracy in four splitting ratio.</figcaption>
+</div>
+
+Figure 11 shows some predicted additional tags for example UI designs by our model.
 <div style="color:#0000FF" align="center">
 <img src="figures/figure9.png"/> 
+<figcaption>Fig. 11. The predicted tags by our model for complementing the original tags.</figcaption>
 </div>
 
-Figure shows visualization of the salient features in our model leading to the final predictions.
+Figure 12 shows the visualization of salient visual and textual features in our model leading to the final predictions.
 <div style="color:#0000FF" align="center">
 <img src="figures/figure10.png"/> 
+<figcaption>Fig. 12. Visualization of the salient features in our model leading to the final predictions.</figcaption>
 </div>
 
-Common causes for tag augmentation failure. 
-```diff
-+ Figure with complete caption
-```
+ 
+
+Some common causes for tag augmentation failure. 
+<div style="color:#0000FF" align="center">
+<img src="figures/failure.png"/> 
+<figcaption>Fig. 13. Examples of the three kinds of prediction errors.</figcaption>
+</div>
 
 ## RETRIEVAL EVALUATION
-We conduct a pilot user study to evaluate the usefulness of the predicted addition tags for boot-strapping the UI design retrieval.
-```diff
-+ Experiment and Result
-```
+We conduct a pilot user study to evaluate the usefulness of the predicted addition tags for boot-strapping the UI design retrieval. Figure 14 and Figure 15 provides initial evidence of the usefulness of our method for enhancing the performance of tagging-based search. For more detail of this user study, please [see the website](https://sites.google.com/view/uitagpredictionuserstudy/home).
+<div style="color:#0000FF" align="center">
+<img src="figures/table3.png"/> 
+<figcaption>Fig. 14. The random queries for searching UI designs.</figcaption>
+</div>
 
-<!-- Generalization&Usefulness contains all data we used in this part and the results from model(M), developers(A1,A2,A3) and Evaluator. -->
+<div style="color:#0000FF" align="center">
+<img src="figures/table4.png"/> 
+<figcaption>Fig. 15. The comparison of the experiment and control groups. ∗ denotes 𝑝<0.01, ∗∗ denotes 𝑝<0.05.</figcaption>
+</div>
 
 ## License
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)

@@ -29,14 +29,11 @@ Optional arguments:
 | Parameter                 | Default       | Description   |	
 | :------------------------ |:-------------:| :-------------|
 | --chromedriver  	        |./chromedriver/| Chrome Driver Location
-| --ipath                   |./images/      | Image Save Location
-| --mpath 		            |./Metadata.csv	| Metadata Save Location
+| --ipath                   |../images/      | Image Save Location
+| --mpath 		            |../Metadata.csv	| Metadata Save Location
 | --headless                |   true        | Chrome headless
 | -h --help                 |               | show this help message and exit
 
-<!-- ## Authorship
-
-This project is contributed by [Sidong Feng](https://github.com/u6063820). -->
 
 ## License
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
