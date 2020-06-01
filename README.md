@@ -47,7 +47,7 @@ We show some examples in our dataset, top is the designs and bottom is its metad
 <!-- <div style="color:#0000FF" align="center"> -->
 <p align="center">
 <img src="figures/figure2.png" width="70%"/> 
-<figcaption>Fig. 3. Example and Metadata of our Dribbble dataset crawled from December 27, 2018 to March 19, 2019</figcaption>
+Fig. 3. Example and Metadata of our Dribbble dataset crawled from December 27, 2018 to March 19, 2019
 </p>
 <!-- </div> -->
 
