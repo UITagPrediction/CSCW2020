@@ -4,7 +4,7 @@ This project aimed to distill the semantic association via [Apriori Algorithm](h
 In this work, we use the Louvain method implemented in the [Gephi](https://gephi.org/) tool to detect communities.
 
 <div style="color:#0000FF" align="center">
-<img src="../figures/communitydetection.png"/> 
+<img src="https://github.com/UITagPrediction/CSCW2020/blob/master/figures/figure3.png"/> 
 </div>
 
 ## Installation
