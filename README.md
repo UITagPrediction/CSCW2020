@@ -75,7 +75,7 @@ We adopted a consensus-driven, iterative approach to combine the observed tag la
 Figure 5 shows the categorization of some most frequent UI-related tags. For example, the APP FUNCTIONALITY category contains "MUSIC", "FOOD & DRINK", "GAME", and the subcategory "FOOD & DRINK" contains UI design tagged with "Food", "Restaurant", "Drink", etc.
 <p align="center">
 <img src="figures/figure4.png" style="width:100%"/> 
-<figcaption></figcaption>
+
 </p><p align="center">Fig. 5. The categorization of some most frequent UI-related tags.<p align="center">
 
 ### Consistency of Vocabulary
@@ -95,7 +95,7 @@ We first collect all existing UI design with specific tags identified in our emp
 Additionally, to understand how our ensemble model make its decisions through the visual information, we apply a visualization technique (Saliency Maps) for understanding which part of the figure and which keyword leading to the final prediction.
 <p align="center">
 <img src="figures/CNN_structure.png"/> 
-<figcaption></figcaption>
+
 </p><p align="center">Fig. 7. The architecture of our tag prediction model.<p align="center">
 
 ### Dataset preparing
@@ -103,7 +103,7 @@ Figure 8 shows the statistics of our dataset for each tag. The dataset contains 
 
 <p align="center">
 <img src="figures/dataset.png"/> 
-<figcaption></figcaption>
+
 </p><p align="center">Fig. 8. The number of instances per tag in the proposed dataset.<p align="center">
 
 ### Training and Demo process
@@ -118,25 +118,25 @@ We further set up several basic machine-learning baselines including the feature
 
 <p align="center">
 <img src="figures/result.png"/> 
-<figcaption></figcaption>
+
 </p><p align="center">Fig. 9. Tag classification accuracy for four dataset splitting ratio in different methods.<p align="center">
 
 The detailed results can be viewed here.
 <p align="center">
 <img src="figures/detailresult.png"/> 
-<figcaption></figcaption>
+
 </p><p align="center">Fig. 10. Tag classification accuracy in four splitting ratio.<p align="center">
 
 Figure 11 shows some predicted additional tags for example UI designs by our model.
 <p align="center">
 <img src="figures/figure9.png"/> 
-<figcaption></figcaption>
+
 </p><p align="center">Fig. 11. The predicted tags by our model for complementing the original tags.<p align="center">
 
 Figure 12 shows the visualization of salient visual and textual features in our model leading to the final predictions.
 <p align="center">
 <img src="figures/figure10.png"/> 
-<figcaption></figcaption>
+
 </p><p align="center">Fig. 12. Visualization of the salient features in our model leading to the final predictions.<p align="center">
 
  
@@ -144,19 +144,19 @@ Figure 12 shows the visualization of salient visual and textual features in our 
 Some common causes for tag augmentation failure. 
 <p align="center">
 <img src="figures/failure.png"/> 
-<figcaption></figcaption>
+
 </p><p align="center">Fig. 13. Examples of the three kinds of prediction errors.<p align="center">
 
 ## RETRIEVAL EVALUATION
 We conduct a pilot user study to evaluate the usefulness of the predicted addition tags for boot-strapping the UI design retrieval. Figure 14 and Figure 15 provides initial evidence of the usefulness of our method for enhancing the performance of tagging-based search. For more detail of this user study, please [see the website](https://sites.google.com/view/uitagpredictionuserstudy/home).
 <p align="center">
 <img src="figures/table3.png"/> 
-<figcaption></figcaption>
+
 </p><p align="center">Fig. 14. The random queries for searching UI designs.<p align="center">
 
 <p align="center">
 <img src="figures/table4.png"/> 
-<figcaption></figcaption>
+
 </p><p align="center">Fig. 15. The comparison of the experiment and control groups. ∗ denotes 𝑝<0.01, ∗∗ denotes 𝑝<0.05. <p align="center">
 
 ## License
