@@ -70,7 +70,7 @@ We adopted a consensus-driven, iterative approach to combine the observed tag la
 
 Figure 5 shows the categorization of some most frequent UI-related tags. For example, the APP FUNCTIONALITY category contains "MUSIC", "FOOD & DRINK", "GAME", and the subcategory "FOOD & DRINK" contains UI design tagged with "Food", "Restaurant", "Drink", etc.
 <div style="color:#0000FF" align="center">
-<img src="figures/figure4.png"/> 
+<img src="figures/figure4.png" style="width:100%"/> 
 <figcaption>Fig. 5. The categorization of some most frequent UI-related tags.</figcaption>
 </div>
 
