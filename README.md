@@ -75,8 +75,8 @@ We adopted a consensus-driven, iterative approach to combine the observed tag la
 Figure 5 shows the categorization of some most frequent UI-related tags. For example, the APP FUNCTIONALITY category contains "MUSIC", "FOOD & DRINK", "GAME", and the subcategory "FOOD & DRINK" contains UI design tagged with "Food", "Restaurant", "Drink", etc.
 <p align="center">
 <img src="figures/figure4.png" style="width:100%"/> 
-<figcaption>Fig. 5. The categorization of some most frequent UI-related tags.</figcaption>
-</p>
+<figcaption></figcaption>
+</p><p align="center">Fig. 5. The categorization of some most frequent UI-related tags.<p align="center">
 
 ### Consistency of Vocabulary
 We adopt a semi-automatic method (1) train a word embedding to extract semantically-related words like "minimal" and "minimalistic" (2) define a set of rules to discriminate the abbreviations (3) manually check the vocabulary
@@ -84,7 +84,6 @@ We adopt a semi-automatic method (1) train a word embedding to extract semantica
 Figure 6 shows the 40 most frequent UI related tags with their abbreviations and synonyms and in brackets indicate the number of occurence.
 <p align="center">
 <img src="figures/figure5.png"/> 
-<figcaption></figcaption>
 </p><p align="center">Fig. 6. The 40 most frequent UI related tags with their abbreviations and synonyms and in brackets indicate the number of occurence.<p align="center">
 
 The full UI category can be viewed [Here](RecoverTags/categorization.py)
