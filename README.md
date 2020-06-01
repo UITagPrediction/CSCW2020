@@ -44,8 +44,8 @@ We build a [web crawler](Crawl/README.md) to collect designs and associated meta
 
 We show some examples in our dataset, top is the designs and bottom is its metadata.
 
-<div style="text-align:center">
-<img src="figures/figure2.png" width="70%"/> 
+<div style="color:#0000FF" align="center">
+<img src="figures/figure2.png" width="100%"/> 
 <figcaption>Fig. 3. Example and Metadata of our Dribbble dataset crawled from December 27, 2018 to March 19, 2019</figcaption>
 </div>
 
