@@ -5,6 +5,7 @@ In this work, we use the Louvain method implemented in the [Gephi](https://gephi
 
 <div style="color:#0000FF" align="center">
 <img src="https://github.com/UITagPrediction/CSCW2020/blob/master/figures/figure3.png"/> 
+<figcaption>Fig. 1. The UI-related tag associative graph from December 27, 2018 to March 19, 2019.</figcaption>
 </div>
 
 ## Installation
