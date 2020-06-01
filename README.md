@@ -43,8 +43,8 @@ Only professional designers can be invited to upload their design works for shar
 We build a [web crawler](Crawl/README.md) to collect designs and associated metadata from Dribbble from December 27, 2018 to March 19, 2019 with a collection of **226,000** graphical design.
 
 We show some examples in our dataset, top is the designs and bottom is its metadata.
-<div style="color:#0000FF" align="right">
-<img src="figures/figure2.png" width="100%" height="100%"/> 
+<div style="color:#0000FF" align="center">
+<img src="figures/figure2.png" width="70%"/> 
 <figcaption>Fig. 3. Example and Metadata of our Dribbble dataset crawled from December 27, 2018 to March 19, 2019</figcaption>
 </div>
 
